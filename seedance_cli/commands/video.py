@@ -5,7 +5,14 @@ import click
 from seedance_cli.core.client import get_client
 from seedance_cli.core.exceptions import SeedanceError
 from seedance_cli.core.output import (
-    SEEDANCE_MODELS, DEFAULT_MODEL, print_error, print_json, print_video_result, ASPECT_RATIOS, DEFAULT_ASPECT_RATIO, RESOLUTIONS, DEFAULT_RESOLUTION,
+    ASPECT_RATIOS,
+    DEFAULT_ASPECT_RATIO,
+    DEFAULT_MODEL,
+    RESOLUTIONS,
+    SEEDANCE_MODELS,
+    print_error,
+    print_json,
+    print_video_result,
 )
 
 
@@ -153,4 +160,3 @@ def image_to_video(
     except SeedanceError as e:
         print_error(e.message)
         raise SystemExit(1) from e
-

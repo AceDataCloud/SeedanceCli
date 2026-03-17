@@ -11,9 +11,9 @@ from importlib import metadata
 import click
 from dotenv import load_dotenv
 
-from seedance_cli.commands.video import generate, image_to_video
+from seedance_cli.commands.info import aspect_ratios, config, models, resolutions
 from seedance_cli.commands.task import task, tasks_batch, wait
-from seedance_cli.commands.info import models, config, aspect_ratios, resolutions
+from seedance_cli.commands.video import generate, image_to_video
 
 load_dotenv()
 

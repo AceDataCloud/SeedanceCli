@@ -22,7 +22,9 @@ class Settings:
         default_factory=lambda: float(os.environ.get("SEEDANCE_REQUEST_TIMEOUT", "1800"))
     )
     default_model: str = field(
-        default_factory=lambda: os.environ.get("SEEDANCE_DEFAULT_MODEL", "doubao-seedance-1-0-pro-250528")
+        default_factory=lambda: os.environ.get(
+            "SEEDANCE_DEFAULT_MODEL", "doubao-seedance-1-0-pro-250528"
+        )
     )
 
     @property

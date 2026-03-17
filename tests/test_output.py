@@ -1,16 +1,16 @@
 """Tests for output formatting."""
 
 from seedance_cli.core.output import (
+    ASPECT_RATIOS,
     DEFAULT_MODEL,
+    RESOLUTIONS,
     SEEDANCE_MODELS,
     print_error,
-    print_video_result,
     print_json,
     print_models,
     print_success,
     print_task_result,
-    ASPECT_RATIOS,
-    RESOLUTIONS,
+    print_video_result,
 )
 
 
@@ -24,7 +24,13 @@ class TestConstants:
         assert DEFAULT_MODEL in SEEDANCE_MODELS
 
     def test_models_include_all(self):
-        for model in ['doubao-seedance-1-5-pro-251215', 'doubao-seedance-1-0-pro-250528', 'doubao-seedance-1-0-pro-fast-251015', 'doubao-seedance-1-0-lite-t2v-250428', 'doubao-seedance-1-0-lite-i2v-250428']:
+        for model in [
+            "doubao-seedance-1-5-pro-251215",
+            "doubao-seedance-1-0-pro-250528",
+            "doubao-seedance-1-0-pro-fast-251015",
+            "doubao-seedance-1-0-lite-t2v-250428",
+            "doubao-seedance-1-0-lite-i2v-250428",
+        ]:
             assert model in SEEDANCE_MODELS
 
     def test_aspect_ratios(self):

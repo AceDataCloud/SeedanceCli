@@ -3,9 +3,7 @@
 import click
 
 from seedance_cli.core.config import settings
-from seedance_cli.core.output import console, print_models
-from seedance_cli.core.output import ASPECT_RATIOS
-from seedance_cli.core.output import RESOLUTIONS
+from seedance_cli.core.output import ASPECT_RATIOS, RESOLUTIONS, console, print_models
 
 
 @click.command()
@@ -45,7 +43,14 @@ def resolutions() -> None:
     table.add_column("Resolution", style="bold cyan")
     table.add_column("Description")
 
-    desc_map = {"480p": "Standard", "720p": "HD", "1080p": "Full HD", "1K": "Default", "2K": "High resolution", "4K": "Ultra-high resolution"}
+    desc_map = {
+        "480p": "Standard",
+        "720p": "HD",
+        "1080p": "Full HD",
+        "1K": "Default",
+        "2K": "High resolution",
+        "4K": "Ultra-high resolution",
+    }
     for r in RESOLUTIONS:
         table.add_row(r, desc_map.get(r, r))
 
