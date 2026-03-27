@@ -22,13 +22,16 @@ def aspect_ratios() -> None:
     table.add_column("Orientation")
 
     for ratio in ASPECT_RATIOS:
-        w, h = ratio.split(":")
-        if int(w) > int(h):
-            orientation = "Landscape"
-        elif int(w) < int(h):
-            orientation = "Portrait"
+        if ":" in ratio:
+            w, h = ratio.split(":")
+            if int(w) > int(h):
+                orientation = "Landscape"
+            elif int(w) < int(h):
+                orientation = "Portrait"
+            else:
+                orientation = "Square"
         else:
-            orientation = "Square"
+            orientation = "Adaptive"
         table.add_row(ratio, orientation)
 
     console.print(table)

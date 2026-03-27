@@ -28,6 +28,7 @@ ASPECT_RATIOS = [
     "4:3",
     "3:4",
     "21:9",
+    "adaptive",
 ]
 
 DEFAULT_ASPECT_RATIO = "16:9"

@@ -100,8 +100,20 @@ seedance models
 Most commands support:
 
 ```
---json          Output raw JSON (for piping/scripting)
---model TEXT    Seedance model version (default: doubao-seedance-1-0-pro-250528)
+--json                       Output raw JSON (for piping/scripting)
+--model TEXT                 Seedance model version (default: doubao-seedance-1-0-pro-250528)
+--aspect-ratio TEXT          Aspect ratio (16:9, 9:16, 1:1, 4:3, 3:4, 21:9, adaptive)
+--resolution TEXT            Output resolution (480p, 720p, 1080p)
+--duration FLOAT             Duration in seconds (2–12). Mutually exclusive with --frames.
+--frames INT                 Frame count (29–289, must satisfy 25+4n). Mutually exclusive with --duration.
+--seed INT                   Random seed for reproducible generation (-1 for random).
+--camerafixed BOOL           Fix the camera position (true/false).
+--watermark BOOL             Add a watermark to the output (true/false).
+--generate-audio BOOL        Generate audio (true/false). Only doubao-seedance-1-5-pro-251215.
+--return-last-frame BOOL     Return the last frame of the video (true/false).
+--service-tier TEXT          Service level (default/flex).
+--execution-expires-after INT  Task timeout in seconds (3600–259200).
+--callback-url TEXT          Webhook callback URL.
 ```
 
 ## Available Models
