@@ -34,8 +34,9 @@ class TestConstants:
             assert model in SEEDANCE_MODELS
 
     def test_aspect_ratios(self):
-        assert len(ASPECT_RATIOS) == 6
+        assert len(ASPECT_RATIOS) == 7
         assert "16:9" in ASPECT_RATIOS
+        assert "adaptive" in ASPECT_RATIOS
 
     def test_resolutions(self):
         assert len(RESOLUTIONS) == 3
